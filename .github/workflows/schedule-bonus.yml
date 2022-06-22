@@ -26,4 +26,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Check if there is a template function in schedule.hpp
-      run: ../scripts/template_check.sh
+      working-directory: .github/scripts
+      run: ./template_check.sh
