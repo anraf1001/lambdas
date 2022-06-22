@@ -20,3 +20,10 @@ jobs:
     - name: Run tests
       working-directory: ${{ env.path }}
       run: ./schedule-ut-bonus
+
+  template-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Check if there is a template function in schedule.hpp
+      run: ../scripts/template_check.sh
